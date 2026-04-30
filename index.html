@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ALEXIA MELUSINE | ALMAS DE POMBAGIRA</title>
+    <meta name="description" content="Direção de arte visceral e o arquétipo do feminino proibido. Não é apenas um link, é um rito de passagem. Toque e desça ao Vortex. Laroyê.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pombagiras.github.io/melusine-oficial/">
+    <meta property="og:title" content="ALEXIA MELUSINE | ALMAS DE POMBAGIRA">
+    <meta property="og:description" content="Direção de arte visceral e o arquétipo do feminino proibido. Não é apenas um link, é um rito de passagem. Toque e desça ao Vortex. Laroyê.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ALEXIA MELUSINE | ALMAS DE POMBAGIRA">
+    <meta name="twitter:description" content="Não é apenas um link, é um rito de passagem. Direção de arte visceral e o feminino proibido. Laroyê.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/pombagiras/melusine-oficial/refs/heads/main/Ale%20Ultra%20(1).png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        :root {
+            --primary-red: #8B0000;
+            --deep-black: #0a0a0a;
+            --glass-bg: rgba(20, 20, 20, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --accent-gold: #D4AF37;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            animation: bgPulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes bgPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Header */
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        /* Warning Banner */
+        .warning-banner {
+            background: linear-gradient(90deg, rgba(139, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .warning-banner strong {
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .warning-banner p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Accordion Header */
+        .accordion-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            border-left: 4px solid var(--primary-red);
+            min-height: 80px;
+            touch-action: manipulation;
+            gap: 1rem;
+        }
+        
+        .accordion-header:active {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        }
+        
+        .pombagira-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .pombagira-info {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .pombagira-number {
+            background: var(--primary-red);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            box-shadow: 0 2px 8px rgba(139, 0, 0, 0.5);
+        }
+        
+        .pombagira-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pombagira-domain {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .accordion-icon {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Accordion Content */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 2000px;
+            transition: max-height 0.6s ease-in;
+        }
+        
+        .content-inner {
+            padding: 1.5rem 1rem;
+            border-top: 1px solid var(--glass-border);
+        }
+        
+        .content-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section h3 {
+            color: var(--accent-gold);
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 3px solid var(--primary-red);
+            padding-left: 0.75rem;
+        }
+        
+        .content-section p, .content-section ul {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .content-section ul li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .content-section ul li:before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-size: 0.8rem;
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: rgba(139, 0, 0, 0.3);
+            border: 1px solid var(--primary-red);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .warning-box strong {
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .warning-box p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Attributes Grid */
+        .attributes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .attribute-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.75rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .attribute-label {
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .attribute-value {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation Buttons */
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+        
+        .nav-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+        }
+        
+        .nav-btn:active {
+            transform: scale(0.9);
+            background: rgba(139, 0, 0, 0.6);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .laroye {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        
+        /* Tablet and Desktop */
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .pombagira-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .pombagira-name {
+                font-size: 1.3rem;
+            }
+            
+            .attributes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .content-section p, .content-section ul {
+                font-size: 1rem;
+            }
+            
+            .nav-buttons {
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .nav-btn {
+                width: 64px;
+                height: 64px;
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1000px;
+            }
+            
+            .pombagira-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--accent-gold);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Selection Color */
+        ::selection {
+            background: var(--primary-red);
+            color: white;
+        }
+        
+        /* Image Loading */
+        .pombagira-image {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .pombagira-image.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo">✦ ALEXIA MELUSINE ✦</div>
+            <div class="subtitle">Almas de Pombagira</div>
+        </div>
+    </header>
+    
+    <div class="warning-banner">
+        <strong>⚠ AVISO IMPORTANTE</strong>
+        <p>Este material tem fins exclusivamente informativos e culturais. As Pombagiras são entidades espirituais complexas que exigem respeito, seriedade e orientação adequada. Nunca trabalhe com essas entidades sem orientação de um Pai ou Mãe de Santo devidamente iniciado.</p>
+    </div>
+    
+    <div class="container">
+        <h2 class="section-title">As 24 Pombagiras</h2>
+        
+        <!-- Pombagira 1 - Maria Padilha -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_padilha_1.png" alt="Maria Padilha" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">1</span>
+                        Maria Padilha
+                    </div>
+                    <div class="pombagira-domain">Comando • Realeza</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Origem e Sincretismo</h3>
+                        <p>Maria Padilha é a Rainha das Pombagiras, a entidade máxima dessa falange. Seu nome remete historicamente a María de Padilla, nobre espanhola do século XIV. É sincretizada com Maria Madalena e em certas casas com Iansã (Oyá).</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Soberania absoluta no reino das Pombagiras</li>
+                            <li>Amor apaixonado, dominante e transformador</li>
+                            <li>Proteção de mulheres em relações de poder desigual</li>
+                            <li>Rompimento de magias e feitiços adversos</li>
+                            <li>Abertura de caminhos e realização de justiça espiritual</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h3>Características Rituais</h3>
+                        <div class="attributes-grid">
+                            <div class="attribute-item">
+                                <div class="attribute-label">Cores</div>
+                                <div class="attribute-value">Vermelho e Preto</div>
+                            </div>
+                            <div class="attribute-item">
+                                <div class="attribute-label">Símbolos</div>
+                                <div class="attribute-value">Coroa, taça de vinho, rosa vermelha, espada</div>
+                            </div>
+                            <div class="attribute-item">
+                                <div class="attribute-label">Oferendas</div>
+                                <div class="attribute-value">Rosas vermelhas, vinho tinto, champanhe, mel, cigarro fino</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Maria Padilha trabalha com energias de altíssima voltagem. Pedidos a ela sem a devida contrapartida espiritual podem gerar desequilíbrios graves. Ela cobra — e cobra caro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 2 - Maria Mulambo -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_mulambo_1%20(1).png" alt="Maria Mulambo" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">2</span>
+                        Maria Mulambo
+                    </div>
+                    <div class="pombagira-domain">Cura • Humildade</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Origem e Significado</h3>
+                        <p>Maria Mulambo representa a face mais humana, sofrida e compassiva das Pombagiras. É a entidade dos descartados, dos humilhados, dos que não têm mais esperança. Por isso mesmo, sua força de cura é extraordinária.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Cura de doenças físicas e espirituais profundas</li>
+                            <li>Limpeza de cargas pesadas, miasmas e obsessões</li>
+                            <li>Auxílio em situações de miséria extrema</li>
+                            <li>Proteção de pessoas em situação de rua ou abandono</li>
+                            <li>Libertação de vícios e compulsões</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Não a subestime por seus atributos humildes. Maria Mulambo tem o dom de transformar dor em cura. Chamá-la sem genuína necessidade ou humildade é uma ofensa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 3 - Maria Quitéria -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_quiteria_1.png" alt="Maria Quitéria" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">3</span>
+                        Maria Quitéria
+                    </div>
+                    <div class="pombagira-domain">Guerra • Proteção</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Origem e Sincretismo</h3>
+                        <p>Maria Quitéria é a Pombagira guerreira. Carrega espada, não rosa. É associada à heroína baiana da Independência do Brasil. Carrega atributos de Ogum (guerra, ferro, proteção) filtrados pelo feminino.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Proteção física e espiritual de alta intensidade</li>
+                            <li>Combate a trabalhos de magia negra e feitiços</li>
+                            <li>Defesa de mulheres vítimas de violência</li>
+                            <li>Quebra de opressões e dominações abusivas</li>
+                            <li>Trabalhos de guerra espiritual e corte de amarrações</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Maria Quitéria não faz trabalhos pela metade. Ao pedir sua proteção, esteja preparado para que ela use os meios que julgar necessários — incluindo os mais cortantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 4 - Rosa Caveira -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/rosa_caveira_1.png" alt="Rosa Caveira" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">4</span>
+                        Rosa Caveira
+                    </div>
+                    <div class="pombagira-domain">Justiça • Morte</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Domínio da Morte e Transformação</h3>
+                        <p>Rosa Caveira habita a fronteira entre os vivos e os mortos. É a guardiã da morte como passagem, a entidade que conhece os segredos além do véu e que administra a justiça final.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Justiça espiritual severa e implacável</li>
+                            <li>Trabalhos de descimento e de mandinga de cemitério</li>
+                            <li>Proteção de médiuns que trabalham com almas</li>
+                            <li>Auxílio em situações de luto e morte</li>
+                            <li>Corte de laços kármicos tóxicos</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Rosa Caveira é uma das entidades que mais cobra inadequação ritual. Qualquer trabalho feito de forma irresponsável pode atrair influências da Linha da Morte fora de controle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 5 - Dama da Noite -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/dama_da_noite_1.png" alt="Dama da Noite" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">5</span>
+                        Dama da Noite
+                    </div>
+                    <div class="pombagira-domain">Mistério • Oculto</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Noite Como Sagrado</h3>
+                        <p>A Dama da Noite é o mistério encarnado — a entidade que habita as sombras. É a guardiã dos segredos, dos enigmas, dos conhecimentos que o mundo diurno não pode suportar.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Revelação de segredos e mistérios ocultos</li>
+                            <li>Proteção durante a noite e em situações de sigilo</li>
+                            <li>Trabalhos de magia lunar e de oculto</li>
+                            <li>Abertura da percepção espiritual e mediúnica</li>
+                            <li>Desmascaramento de traições e enganos</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Dama da Noite não tolera superficialidade. Aproximar-se dela apenas por curiosidade pode abrir portas do inconsciente que a pessoa não está preparada para enfrentar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 6 - Sete Saias -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_saias_1.png" alt="Sete Saias" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">6</span>
+                        Sete Saias
+                    </div>
+                    <div class="pombagira-domain">Alegria • Intensidade</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Multiplicidade das Sete Saias</h3>
+                        <p>Sete Saias é a Pombagira da festa, do excesso sagrado, da alegria como força espiritual. As sete saias representam as sete formas do feminino: amor, dança, música, prazer, sedução, liberdade e transformação.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Alegria, festividade e leveza espiritual</li>
+                            <li>Amor intenso e passional</li>
+                            <li>Prosperidade através da beleza e da sedução</li>
+                            <li>Cura através do prazer e da expressão do corpo</li>
+                            <li>Proteção de artistas e dançarinas</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A intensidade de Sete Saias pode ser avassaladora. Seu excesso pode virar compulsão. Mantenha sempre equilíbrio nos trabalhos com ela.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 7 - Cigana -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/cigana_1.png" alt="Pombagira Cigana" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">7</span>
+                        Cigana
+                    </div>
+                    <div class="pombagira-domain">Liberdade • Prosperidade</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Ancestralidade Cigana</h3>
+                        <p>A Pombagira Cigana carrega toda a energia do povo cigano: a liberdade que não se prende, a prosperidade que circula, a sabedoria dos caminhos percorridos. Ela não tem casa fixa — ela É o caminho.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Leitura do destino e clarividência</li>
+                            <li>Abertura de caminhos para prosperidade material</li>
+                            <li>Liberdade em situações de aprisionamento</li>
+                            <li>Amor livre e relacionamentos sem amarras</li>
+                            <li>Viagens, mudanças e novas oportunidades</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira Cigana ensina que a liberdade tem um preço: a responsabilidade pelas próprias escolhas. Ela mostra o caminho — mas não carrega ninguém.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 8 - Maria Navalha -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_navalha_1.png" alt="Maria Navalha" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">8</span>
+                        Maria Navalha
+                    </div>
+                    <div class="pombagira-domain">Malandragem • Rua</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Rua Como Território Sagrado</h3>
+                        <p>Maria Navalha é a Pombagira da rua em seu aspecto mais cru. É a entidade da malandragem — a sabedoria de quem aprendeu a sobreviver nas margens. Ela é afiada como sua navalha — precisa, rápida, sem hesitação.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Proteção em situações de perigo nas ruas</li>
+                            <li>Corte de feitiços e amarrações com precisão cirúrgica</li>
+                            <li>Inteligência espiritual para lidar com situações difíceis</li>
+                            <li>Proteção de profissionais do sexo e trabalhadores noturnos</li>
+                            <li>Revelação de traições com precisão e rapidez</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Maria Navalha corta sem aviso prévio. Trabalhar com ela exige que o pedinte também seja direto e honesto — ela detecta falsidade imediatamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 9 - Da Praia -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_praia_1.png" alt="Pombagira da Praia" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">9</span>
+                        Da Praia
+                    </div>
+                    <div class="pombagira-domain">Emoção • Limpeza</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Água Como Purificação</h3>
+                        <p>A Pombagira da Praia governa a fronteira entre a terra e o mar. Trabalha com a força da água salgada para limpeza espiritual, desobsessão e cura emocional.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Limpeza espiritual profunda e renovação</li>
+                            <li>Cura emocional e de feridas da alma</li>
+                            <li>Trabalhos com água salgada e elementos do mar</li>
+                            <li>Proteção de pescadores e trabalhadores do mar</li>
+                            <li>Amor gentil e sensível</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Não faça oferendas no mar sem cuidado com o meio ambiente. Oferendas plásticas ou não biodegradáveis ofendem tanto a Pombagira da Praia quanto Iemanjá.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 10 - Maria Farrapo -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/maria_farrapo_1.png" alt="Maria Farrapo" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">10</span>
+                        Maria Farrapo
+                    </div>
+                    <div class="pombagira-domain">Sanidade • Caos Mental</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>O Caos Como Instrumento</h3>
+                        <p>Maria Farrapo governa a linha tênue entre a sanidade e o caos mental. Ela não é louca — mas conhece o caos profundamente e pode trabalhar dentro dele com maestria.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Cura espiritual de traumas profundos e fragmentação mental</li>
+                            <li>Proteção de pessoas em crise emocional ou mental</li>
+                            <li>Trabalhos de reorganização de energias caóticas</li>
+                            <li>Desobsessão de entidades que atuam na mente</li>
+                            <li>Proteção de psiquiatras e psicólogos</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Maria Farrapo trabalha em território perigoso: a mente humana em colapso. Qualquer trabalho com ela deve ser feito por médium experiente com pleno domínio de si mesmo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 11 - Menina -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/menina_1.png" alt="Pombagira Menina" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">11</span>
+                        Menina
+                    </div>
+                    <div class="pombagira-domain">Renovação • Inocência</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Inocência Como Força</h3>
+                        <p>A Pombagira Menina representa o paradoxo: a inocência dentro do poder, a renovação dentro do mistério. Ela é jovem — não imatura, mas eternamente nova, capaz de ver o mundo com olhos frescos.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Renovação de relacionamentos e situações estagnadas</li>
+                            <li>Proteção de crianças e jovens</li>
+                            <li>Recuperação da alegria e da leveza perdidas</li>
+                            <li>Início de novos ciclos e novas fases</li>
+                            <li>Cura da criança interior ferida</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Não confunda a leveza da Pombagira Menina com fraqueza. Ela tem a força da renovação — que pode ser tão devastadora quanto qualquer entidade adulta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 12 - Da Figueira -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_figueira_1.png" alt="Pombagira da Figueira" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">12</span>
+                        Da Figueira
+                    </div>
+                    <div class="pombagira-domain">Raiz • Ancestralidade</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Figueira Como Eixo Sagrado</h3>
+                        <p>A Pombagira da Figueira é a entidade da ancestralidade, da raiz, da terra como mãe sagrada. Ela habita as figueiras — árvores sagradas onde certas raízes são morada de espíritos ancestrais.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Ancestralidade e memória dos antepassados</li>
+                            <li>Cura de questões kármicas de família</li>
+                            <li>Trabalhos com raízes e ervas de terra</li>
+                            <li>Proteção de idosos e anciãs</li>
+                            <li>Recuperação de tradições e conhecimentos perdidos</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira da Figueira não gosta de apressar. Trabalhos pedidos a ela levam o tempo que precisam — meses, às vezes anos. Quem não tem paciência ancestral não deve trabalhar com ela.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Pombagiras dos Reinos Profundos</h2>
+        
+        <!-- Pombagira 13 - Das Almas -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_almas_1.png" alt="Pombagira das Almas" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">13</span>
+                        Das Almas
+                    </div>
+                    <div class="pombagira-domain">Almas • Intermediação</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Missão das Almas</h3>
+                        <p>A Pombagira das Almas é a grande intermediária entre os mundos. Ela não apenas conhece as almas dos mortos — ela as guia, as ouve, as consola e, quando necessário, as convoca.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Comunicação com almas de mortos e despacho de eguns</li>
+                            <li>Limpeza de locais assombrados</li>
+                            <li>Auxílio a familiares de recém-falecidos</li>
+                            <li>Resolução de promessas não cumpridas com os mortos</li>
+                            <li>Proteção de médiuns da Linha das Almas</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira das Almas trabalha com eguns — espíritos que podem ser extremamente difíceis de manejar. JAMAIS deve ser contactada por pessoas sem iniciação adequada na Linha das Almas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 14 - Sete Encruzilhadas -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/sete_encruzilhadas_1.png" alt="Sete Encruzilhadas" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">14</span>
+                        Sete Encruzilhadas
+                    </div>
+                    <div class="pombagira-domain">Encruzilhadas • Escolhas</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Encruzilhada Como Cosmologia</h3>
+                        <p>A Pombagira Sete Encruzilhadas governa todos os pontos de cruzamento, todas as bifurcações do destino. O número sete multiplica a força: sete caminhos, sete possibilidades, sete destinos em aberto.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Clareza em momentos de encruzilhada e decisão</li>
+                            <li>Abertura de múltiplos caminhos simultaneamente</li>
+                            <li>Trabalhos de destravamento de situações paralisadas</li>
+                            <li>Proteção em viagens e mudanças de direção</li>
+                            <li>Revelação de consequências de escolhas</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Sete Encruzilhadas pode mostrar verdades que paralisam ainda mais se o consulente não estiver preparado. Trabalhe com ela quando já tiver clareza de que quer saber o caminho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 15 - Da Lua -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_lua_1.png" alt="Pombagira da Lua" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">15</span>
+                        Da Lua
+                    </div>
+                    <div class="pombagira-domain">Lua • Ciclos • Feminino</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Os Ciclos como Sabedoria</h3>
+                        <p>A Pombagira da Lua é a guardiã dos ciclos, das fases, do feminino que sobe e desce como a maré. Ela governa os ritmos lunares e todos os ciclos da vida.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Sincronização com ciclos lunares para magia</li>
+                            <li>Cura do corpo feminino e regulação de ciclos</li>
+                            <li>Trabalhos de magia lunar</li>
+                            <li>Clarividência e sonhos proféticos</li>
+                            <li>Proteção de mulheres em seu ciclo menstrual</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira da Lua amplifica tudo que está no campo emocional. Pessoas em estados de extrema instabilidade emocional não devem trabalhar com ela sem acompanhamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 16 - Das Trevas -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_trevas_1.png" alt="Pombagira das Trevas" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">16</span>
+                        Das Trevas
+                    </div>
+                    <div class="pombagira-domain">Trevas • Sombra • Profundidade</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Escuridão Sagrada</h3>
+                        <p>A Pombagira das Trevas não significa maldade — significa profundidade, o que está além da visão ordinária. Ela é anterior à manifestação, guardiã do que ainda não veio à luz.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Revelação de inimigos e ocultos de alta profundidade</li>
+                            <li>Trabalhos de magia profunda e de alto sigilo</li>
+                            <li>Proteção durante operações espirituais de risco</li>
+                            <li>Acessar conhecimentos ocultos e esquecidos</li>
+                            <li>Dissolução de ilusões</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira das Trevas é uma das entidades que mais exige preparo do médium. Trabalhos sem proteção adequada podem resultar em abertura de canais para entidades de baixa frequência. Extremamente restrita a iniciados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 17 - Da Serra -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_serra_1.png" alt="Pombagira da Serra" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">17</span>
+                        Da Serra
+                    </div>
+                    <div class="pombagira-domain">Serra • Altitude • Visão</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Serra Como Perspectiva</h3>
+                        <p>A Pombagira da Serra habita o alto, as montanhas, os picos onde a terra toca o céu. É a entidade da visão ampla — literal e espiritual. Quem está na Serra enxerga longe.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Visão ampla e estratégica de situações complexas</li>
+                            <li>Proteção de pessoas em lugares altos</li>
+                            <li>Trabalhos de clarividência de longa distância</li>
+                            <li>Elevação espiritual e ascensão de vibração</li>
+                            <li>Acesso a forças da natureza — vento, tempestade</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A altitude da Pombagira da Serra pode criar sensação de distanciamento excessivo da realidade prática. Médiuns que trabalham muito com ela sem equilíbrio podem desenvolver dificuldade de lidar com o cotidiano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 18 - Do Fogo -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/do_fogo_1.png" alt="Pombagira do Fogo" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">18</span>
+                        Do Fogo
+                    </div>
+                    <div class="pombagira-domain">Fogo • Transformação • Purificação</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Fogo Como Alquimia</h3>
+                        <p>A Pombagira do Fogo governa o elemento mais transformador da natureza. O fogo não conserva — ele transforma radicalmente. Ela não preserva o que precisa ser destruído, ela queima o que impede o renascimento.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Purificação intensa através do fogo espiritual</li>
+                            <li>Quebra de feitiços e trabalhos adversos muito arraigados</li>
+                            <li>Transformação radical de situações estagnadas</li>
+                            <li>Paixão intensa e amor que consome e renova</li>
+                            <li>Trabalhos com velas, brasas e fogo sagrado</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira do Fogo não tem meio-termo. Seus trabalhos são de transformação total — o que entra queima por completo. Ela não oferece opção de 'fogo baixo'.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 19 - Das Águas Profundas -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_aguas_profundas_1.png" alt="Pombagira das Águas Profundas" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">19</span>
+                        Das Águas Profundas
+                    </div>
+                    <div class="pombagira-domain">Abismo • Inconsciente</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>O Abismo Como Revelação</h3>
+                        <p>A Pombagira das Águas Profundas governa o que está no fundo — as profundezas abissais onde a luz não chega. Ela é a Pombagira do inconsciente profundo, do que foi submerso e esquecido.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Acesso a memórias profundas e vidas passadas</li>
+                            <li>Cura de traumas que estão enterrados no inconsciente</li>
+                            <li>Revelação de dons espirituais adormecidos</li>
+                            <li>Proteção de mergulhadores e trabalhadores subaquáticos</li>
+                            <li>Trabalhos de regressão espiritual</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>Descer às profundidades sem guia é perigoso. A Pombagira das Águas Profundas pode mostrar coisas que a psique do médium não está preparada para integrar. Trabalho somente com acompanhamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 20 - Da Sombra -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_sombra_1.png" alt="Pombagira da Sombra" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">20</span>
+                        Da Sombra
+                    </div>
+                    <div class="pombagira-domain">Sombra • Integração • Duplo</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Sombra Como Parceira</h3>
+                        <p>A Pombagira da Sombra é a guardiã do Duplo Sombrio — aquele aspecto da personalidade que a pessoa recusa, esconde, rejeita. Ela trabalha com a integração do que foi negado.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Integração da Sombra e dos aspectos negados</li>
+                            <li>Cura de comportamentos compulsivos e autodestrutivos</li>
+                            <li>Revelação de inimigos internos</li>
+                            <li>Trabalhos de autoconhecimento profundo</li>
+                            <li>Libertação de padrões kármicos ligados à negação de si</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira da Sombra não é para os que querem certezas confortáveis. Ela mostra a verdade sobre quem você é — incluindo as partes que você preferiria não ver. Esse encontro exige coragem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 21 - Da Fenda -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_fenda_1.png" alt="Pombagira da Fenda" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">21</span>
+                        Da Fenda
+                    </div>
+                    <div class="pombagira-domain">Fenda • Passagem • Limiar</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>Os Espaços Entre</h3>
+                        <p>A Pombagira da Fenda habita os limiares — as rachaduras entre os mundos, os instantes entre o antes e o depois. A fenda não é um lugar: é uma passagem, um momento de transição.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Passagem entre estados de consciência</li>
+                            <li>Trabalhos em momentos de transição</li>
+                            <li>Proteção em situações de crise aguda</li>
+                            <li>Abertura de portas que parecem completamente fechadas</li>
+                            <li>Proteção de médiuns em transe profundo</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Fenda não é um lugar para ficar — é um lugar para atravessar. Quem fica preso na fenda — em permanente estado de transição sem concluir — sofre consequências espirituais sérias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 22 - Da Calunga Profunda -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_calunga_profunda_1.png" alt="Pombagira da Calunga Profunda" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">22</span>
+                        Da Calunga Profunda
+                    </div>
+                    <div class="pombagira-domain">Calunga • Morte • Infinito</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Calunga nas Tradições</h3>
+                        <p>'Calunga' é uma palavra de origem banto que significa: o mar, a morte, o infinito. A Pombagira da Calunga Profunda governa esse território — não a morte como fim, mas como continuum.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Comunicação com ancestrais de linhagens antigas</li>
+                            <li>Trabalhos de karma e vidas passadas</li>
+                            <li>Proteção dos que estão próximos à morte</li>
+                            <li>Acesso ao registro akáshico</li>
+                            <li>Dissolução de trabalhos de magia muito antigos</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira da Calunga Profunda é uma das entidades de acesso mais restrito. Seu domínio é o mais próximo da morte e do infinito. Qualquer trabalho fora de contexto iniciático é um perigo grave.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 23 - Das Correntes -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/das_correntes_1.png" alt="Pombagira das Correntes" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">23</span>
+                        Das Correntes
+                    </div>
+                    <div class="pombagira-domain">Correntes • Libertação</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>O Duplo Caráter das Correntes</h3>
+                        <p>A Pombagira das Correntes conhece a prisão como ninguém — e por isso sabe libertar como ninguém. As correntes que ela governa são kármicas, de dependência emocional, de feitiço, de vício.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Libertação de amarrações espirituais</li>
+                            <li>Quebra de correntes kármicas e vínculos tóxicos</li>
+                            <li>Proteção de pessoas em cativeiro físico ou emocional</li>
+                            <li>Trabalhos de libertação de vícios</li>
+                            <li>Recordação e honra aos ancestrais escravizados</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira das Correntes pode ser usada para amarrar e para libertar. Aqueles que a invocam para aprisionar outros indevidamente se sujeitam à lei de retorno com correntes ainda mais pesadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pombagira 24 - Da Neblina -->
+        <div class="glass-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/da_neblina_1.png" alt="Pombagira da Neblina" class="pombagira-image" onerror="this.style.display='none'">
+                <div class="pombagira-info">
+                    <div class="pombagira-name">
+                        <span class="pombagira-number">24</span>
+                        Da Neblina
+                    </div>
+                    <div class="pombagira-domain">Neblina • Ilusão • Véu</div>
+                </div>
+                <div class="accordion-icon">▼</div>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <div class="content-section">
+                        <h3>A Neblina Como Verdade</h3>
+                        <p>A Pombagira da Neblina governa o véu entre o real e o irreal. A neblina não esconde por maldade — ela revela que a clareza absoluta é uma ilusão. Ela é a guardiã desse mistério irredutível.</p>
+                    </div>
+                    <div class="content-section">
+                        <h3>Domínios e Forças</h3>
+                        <ul>
+                            <li>Clarividência velada: ver o essencial</li>
+                            <li>Proteção de videntes e oraculistas</li>
+                            <li>Trabalhos de camuflagem espiritual</li>
+                            <li>Confusão dos adversários através da ilusão</li>
+                            <li>Revelação gradual de verdades</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <strong>⚠ ADVERTÊNCIA</strong>
+                        <p>A Pombagira da Neblina pode fazer alguém se perder na ilusão se o trabalho não for conduzido com clareza de intenção. Só a procure quando souber com absoluta clareza o que busca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <div class="footer-text">
+            <p>Documento elaborado com fins informativos e de preservação cultural.</p>
+            <p>Toda prática religiosa deve ser orientada por profissional espiritual habilitado.</p>
+            <p style="margin-top: 1rem; font-size: 0.75rem;">© 2026 - Alexia Melusine</p>
+        </div>
+        <div class="laroye">✦ LAROYÊ! SALVE AS POMBAGIRAS! ✦</div>
+    </footer>
+    
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="scrollToTop()" aria-label="Subir para o topo">↑</button>
+        <button class="nav-btn" onclick="expandAll()" aria-label="Expandir todos">⊕</button>
+        <button class="nav-btn" onclick="collapseAll()" aria-label="Fechar todos">⊖</button>
+    </div>
+    
+    <script>
+        // Accordion Toggle Function with Haptic Feedback
+        function toggleAccordion(element) {
+            // Haptic feedback
+            if (navigator.vibrate) {
+                navigator.vibrate(10); // Light vibration
+            }
+            
+            const content = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            
+            if (isActive) {
+                element.classList.remove('active');
+                content.classList.remove('active');
+            } else {
+                element.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+        
+        // Scroll to Top Function
+        function scrollToTop() {
+            if (navigator.vibrate) {
+                navigator.vibrate(20);
+            }
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Expand All Function
+        function expandAll() {
+            if (navigator.vibrate) {
+                navigator.vibrate([10, 50, 10]);
+            }
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.add('active');
+                header.nextElementSibling.classList.add('active');
+            });
+        }
+        
+        // Collapse All Function
+        function collapseAll() {
+            if (navigator.vibrate) {
+                navigator.vibrate([10, 50, 10]);
+            }
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.classList.remove('active');
+            });
+        }
+        
+        // Add touch feedback for better mobile experience
+        document.querySelectorAll('.accordion-header, .nav-btn').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+        
+        // Prevent zoom on double tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Performance optimization: Lazy loading for accordion content
+        const observerOptions = {
+            root: null,
+            rootMargin: '100px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Image loading handler
+        document.querySelectorAll('.pombagira-image').forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+            }
+        });
+        
+        // Console message
+        console.log('%c✦ LAROYÊ! ✦', 'color: #D4AF37; font-size: 24px; font-weight: bold;');
+        console.log('%cSite das 24 Pombagiras carregado com sucesso.', 'color: #8B0000; font-size: 14px;');
+    </script>
+</body>
+</html>
